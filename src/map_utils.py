@@ -1,5 +1,15 @@
 from random import randint
 
+from tdl.map import Map
+
+
+class GameMap(Map):
+    """Map object to store explored parts of map"""
+
+    def __init__(self, width, height):
+        super().__init__(width, height)
+        self.explored = [[False for y in range(height)] for x in range(width)]
+
 
 class Rect():
     """Holds dimensions"""
